@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,p=1,a=0,res,q;
+    int n,s=0,p=1;
     scanf("%d",&n);
-    q=n;
-    while(q!=0)
+    while(n!=0)
     {
-      r=q%10;
-      p=p*r;
-      a=a+r;
-      q=q/10;
+        int r;
+        r=n%10;
+        s=s+r;
+        p=p*r;
+        n=n/10;
     }
-    res=p-a;
-    printf("%d",res);
+    printf("%d",p-s);
+    
 }
