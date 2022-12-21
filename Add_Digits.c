@@ -1,18 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,s,r;
+    int n,i,s=0,r;
     scanf("%d",&n);
-    while(n>9)
+    while(n!=0)
     {
-        s=0;
-        while(n>0)
+        r=n%10;
+        s=s+r;
+        n=n/10;
+        if(n==0&&s>9)
         {
-            r=n%10;
-            s+=r;
-            n=n/10;
+            n=s;
+            s=0;
         }
-        n=s;
     }
     printf("%d",s);
 }
